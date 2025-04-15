@@ -1007,7 +1007,7 @@ paths:
   /delivery/requests:
     post:
       deprecated: true
-      summary: Richiesta invio notifica
+      summary: [Deprecated] Richiesta invio notifica
       description: >-
         Operazione utilizzata dalla Pubblica Amministrazione per richiedere
         l'invio di una notifica.
