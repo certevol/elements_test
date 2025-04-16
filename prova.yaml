@@ -5,7 +5,7 @@ info:
 paths:
   /user/profile:
     get:
-      summary: "[DEPRECATED] Get user profile"
+      summary: "[ \u26a0\ufe0f DEPRECATED] Get user profile"
       description: Questo endpoint è deprecato e verrà rimosso nelle prossime versioni.
       operationId: getUserProfile
       tags:
