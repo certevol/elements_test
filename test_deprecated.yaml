@@ -625,6 +625,7 @@ paths:
 
   '/delivery/events/payment/f24':
     post:
+      summary: "[DEPRECATED] paymentEventsRequestF24"
       deprecated: true
       operationId: paymentEventsRequestF24
       description: >-
