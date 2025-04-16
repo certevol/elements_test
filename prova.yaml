@@ -32,6 +32,36 @@ paths:
                     type: string
         '404':
           description: Utente non trovato
+paths:
+  /user/settings:
+    get:
+      summary: " Get user Setting"
+      description: Questo endpoint è deprecato e verrà rimosso nelle prossime versioni.
+      operationId: getUserSettings
+      tags:
+        - User
+      deprecated: true
+      parameters:
+        - name: userId
+          in: query
+          required: true
+          schema:
+            type: string
+          description: ID dell'utente
+      responses:
+        '200':
+          description: modifica i parametri
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  email:
+                    type: string
+        '404':
+          description: Utente no
 
 tags:
   - name: User
