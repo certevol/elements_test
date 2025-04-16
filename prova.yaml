@@ -35,7 +35,7 @@ paths:
 
   /user/deprecated-clean:
     get:
-      summary: Get old user info
+      summary: [DEPRECATED] Get old user info
       description: Endpoint obsoleto, ma senza etichetta nel titolo.
       operationId: getOldUser
       tags:
