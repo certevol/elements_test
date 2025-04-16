@@ -32,12 +32,12 @@ paths:
                     type: string
         '404':
           description: Utente non trovato
-paths:
-  /user/settings:
+
+  /user/deprecated-clean:
     get:
-      summary: " Get user Setting"
-      description: Questo endpoint è deprecato e verrà rimosso nelle prossime versioni.
-      operationId: getUserSettings
+      summary: Get old user info
+      description: Endpoint obsoleto, ma senza etichetta nel titolo.
+      operationId: getOldUser
       tags:
         - User
       deprecated: true
@@ -50,7 +50,7 @@ paths:
           description: ID dell'utente
       responses:
         '200':
-          description: modifica i parametri
+          description: Info vecchio profilo utente
           content:
             application/json:
               schema:
@@ -58,10 +58,10 @@ paths:
                 properties:
                   name:
                     type: string
-                  email:
+                  birthdate:
                     type: string
-        '404':
-          description: Utente no
+        '410':
+          description: Risorsa non più disponibile
 
 tags:
   - name: User
