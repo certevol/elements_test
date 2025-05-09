@@ -10,7 +10,6 @@ paths:
       operationId: getUserProfile
       tags:
         - User
-      deprecated: true
       parameters:
         - name: userId
           in: query
