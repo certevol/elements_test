@@ -343,6 +343,14 @@ info:
       |__NOTIFICATION_RADD_RETRIEVED__ | Accesso alla notifica tramite la rete RADD. Non perfeziona la notifica |
 
       </details>
+
+      <details>
+        <summary>Eventi di timeline - PROVA MIA</summary>
+        
+      | Categoria | Descrizione |
+      |-----------|-------------|
+      |una cosa qui| una qui |
+      </details>
       
       <details>
         <summary>Eventi di timeline - v2.6 (tutti gli elementi v1 + v2 + v2.3 + gli elementi seguenti)</summary>
