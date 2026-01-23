@@ -322,7 +322,7 @@ info:
       |__PROBABLE_SCHEDULING_ANALOG_DATE__ |Data probabile di inizio del flusso analogico |
       |__PREPARE_ANALOG_DOMICILE_FAILURE__ | Fallimento della richiesta di prepare (preparazione ad invio) cartaceo a paperChannel |
 
-      </details>
+    </details>
 
       <details>
         <summary>Eventi di timeline - v2 (tutti gli elementi v1 + gli elementi seguenti)</summary>
