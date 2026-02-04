@@ -162,9 +162,8 @@
                         "items": {
                             "$ref": "#/components/schemas/PaymentNotice"
                         },
-                         "example": {
-                                "emailNotice": "my_email@mail.it",
-                                "paymentNotices": [
+                         "example": [
+                                
                                     {
                                         "noticeNumber": "302012387654312384",
                                         "fiscalCode": "77777777777",
@@ -179,6 +178,7 @@
                                         "companyName": "Università degli Studi di Roma La Sapienza",
                                         "description": "Pagamento test PostePay"
                                     }
+                             
                         ]
                     },
                     "returnUrls": {
