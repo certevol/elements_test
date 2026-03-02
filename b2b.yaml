@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  termsOfService: https://selfcare.notifichedigitali.it/termini-di-servizio
+  termsOfService: 'https://selfcare.notifichedigitali.it/termini-di-servizio'
   x-api-id: api-external-b2b-pa
   title: 'Piattaforma Notifiche: API B2B per le Pubbliche Amministrazioni'
   x-summary: 'Piattaforma Notifiche: API B2B per le Pubbliche Amministrazioni'
@@ -567,11 +567,11 @@ info:
     [https://developer.pagopa.it/send/guides/knowledge-base](https://developer.pagopa.it/send/guides/knowledge-base)
   contact:
     name: 'SEND: supporto enti'
-    url: https://pagopa.atlassian.net/servicedesk/customer/portal/5
+    url: 'https://pagopa.atlassian.net/servicedesk/customer/portal/5'
 servers:
-  - url: https://api.notifichedigitali.it
+  - url: 'https://api.notifichedigitali.it'
     description: Ambiente di produzione
-  - url: https://api.uat.notifichedigitali.it
+  - url: 'https://api.uat.notifichedigitali.it'
     description: Ambiente di collaudo
 security:
   - ApiKeyAuth: []
@@ -776,7 +776,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.7/notifications/sent/{iun}:
+  '/delivery/v2.7/notifications/sent/{iun}':
     get:
       summary: 'EXPERIMENTAL - Mittente: lettura dettagli notifica versione 2'
       description: >-
@@ -808,7 +808,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/notifications/sent/{iun}/attachments/documents/{docIdx}:
+  '/delivery/notifications/sent/{iun}/attachments/documents/{docIdx}':
     get:
       description: Download documento notificato
       summary: Download documento notificato
@@ -844,7 +844,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/notifications/sent/{iun}/attachments/payment/{recipientIdx}/{attachmentName}:
+  '/delivery/notifications/sent/{iun}/attachments/payment/{recipientIdx}/{attachmentName}':
     get:
       description: Download allegato per pagamento
       summary: Download allegato per pagamento
@@ -882,7 +882,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.3/price/{paTaxId}/{noticeCode}:
+  '/delivery/v2.3/price/{paTaxId}/{noticeCode}':
     get:
       operationId: retrieveNotificationPriceV23
       summary: Retrieve notification partial price and total price with effective date
@@ -1374,7 +1374,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/notifications/sent/{iun}:
+  '/delivery/notifications/sent/{iun}':
     get:
       deprecated: true
       summary: 'Mittente: lettura dettagli notifica'
@@ -1405,7 +1405,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.0/notifications/sent/{iun}:
+  '/delivery/v2.0/notifications/sent/{iun}':
     get:
       deprecated: true
       summary: 'Mittente: lettura dettagli notifica versione 2'
@@ -1436,7 +1436,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.1/notifications/sent/{iun}:
+  '/delivery/v2.1/notifications/sent/{iun}':
     get:
       deprecated: true
       summary: 'Mittente: lettura dettagli notifica versione 2'
@@ -1467,7 +1467,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.3/notifications/sent/{iun}:
+  '/delivery/v2.3/notifications/sent/{iun}':
     get:
       deprecated: true
       summary: 'Mittente: lettura dettagli notifica versione 2'
@@ -1498,7 +1498,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.4/notifications/sent/{iun}:
+  '/delivery/v2.4/notifications/sent/{iun}':
     get:
       deprecated: true
       summary: 'Mittente: lettura dettagli notifica versione 2'
@@ -1529,7 +1529,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.5/notifications/sent/{iun}:
+  '/delivery/v2.5/notifications/sent/{iun}':
     get:
       deprecated: true
       summary: 'Mittente: lettura dettagli notifica versione 2'
@@ -1560,7 +1560,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/v2.6/notifications/sent/{iun}:
+  '/delivery/v2.6/notifications/sent/{iun}':
     get:
       summary: 'Mittente: lettura dettagli notifica versione 2'
       description: >-
@@ -1590,7 +1590,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery/price/{paTaxId}/{noticeCode}:
+  '/delivery/price/{paTaxId}/{noticeCode}':
     get:
       deprecated: true
       operationId: retrieveNotificationPrice
@@ -1640,7 +1640,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-push/v2.0/notifications/cancel/{iun}:
+  '/delivery-push/v2.0/notifications/cancel/{iun}':
     put:
       summary: Annullamento notifica
       description: >-
@@ -1676,7 +1676,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-push/v2.0/{iun}/legal-facts:
+  '/delivery-push/v2.0/{iun}/legal-facts':
     get:
       summary: Elenco atti opponibili a terzi
       description: >-
@@ -1712,7 +1712,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-push/{iun}/legal-facts/{legalFactType}/{legalFactId}:
+  '/delivery-push/{iun}/legal-facts/{legalFactType}/{legalFactId}':
     get:
       deprecated: true
       summary: Singolo atto opponibile a terzi
@@ -1749,7 +1749,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-push/{iun}/download/legal-facts/{legalFactId}:
+  '/delivery-push/{iun}/download/legal-facts/{legalFactId}':
     get:
       summary: Singolo atto opponibile a terzi
       description: Permette di scaricare un atto opponibile a terzi <br/>
@@ -1784,7 +1784,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-push/{iun}/legal-facts:
+  '/delivery-push/{iun}/legal-facts':
     get:
       deprecated: true
       summary: Elenco atti opponibili a terzi
@@ -1897,7 +1897,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.8/streams/{streamId}:
+  '/delivery-progresses/v2.8/streams/{streamId}':
     parameters:
       - $ref: '#/components/parameters/pathStreamId'
     get:
@@ -2019,7 +2019,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.8/streams/{streamId}/action/disable:
+  '/delivery-progresses/v2.8/streams/{streamId}/action/disable':
     post:
       summary: EXPERIMENTAL - Disabilita uno stream
       description: >-
@@ -2073,7 +2073,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.8/streams/{streamId}/events:
+  '/delivery-progresses/v2.8/streams/{streamId}/events':
     get:
       summary: EXPERIMENTAL - Leggi progressi notifiche
       description: >-
@@ -2206,7 +2206,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/streams/{streamId}:
+  '/delivery-progresses/streams/{streamId}':
     parameters:
       - $ref: '#/components/parameters/pathStreamId'
     get:
@@ -2293,7 +2293,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/streams/{streamId}/events:
+  '/delivery-progresses/streams/{streamId}/events':
     get:
       deprecated: true
       summary: Leggi progressi notifiche
@@ -2426,7 +2426,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.3/streams/{streamId}:
+  '/delivery-progresses/v2.3/streams/{streamId}':
     parameters:
       - $ref: '#/components/parameters/pathStreamId'
     get:
@@ -2549,7 +2549,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.3/streams/{streamId}/action/disable:
+  '/delivery-progresses/v2.3/streams/{streamId}/action/disable':
     post:
       deprecated: true
       summary: Disabilita uno stream
@@ -2604,7 +2604,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.3/streams/{streamId}/events:
+  '/delivery-progresses/v2.3/streams/{streamId}/events':
     get:
       deprecated: true
       summary: Leggi progressi notifiche
@@ -2752,7 +2752,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.4/streams/{streamId}:
+  '/delivery-progresses/v2.4/streams/{streamId}':
     parameters:
       - $ref: '#/components/parameters/pathStreamId'
     get:
@@ -2875,7 +2875,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.4/streams/{streamId}/action/disable:
+  '/delivery-progresses/v2.4/streams/{streamId}/action/disable':
     post:
       deprecated: true
       summary: Disabilita uno stream
@@ -2930,7 +2930,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.4/streams/{streamId}/events:
+  '/delivery-progresses/v2.4/streams/{streamId}/events':
     get:
       deprecated: true
       summary: Leggi progressi notifiche
@@ -3078,7 +3078,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.5/streams/{streamId}:
+  '/delivery-progresses/v2.5/streams/{streamId}':
     parameters:
       - $ref: '#/components/parameters/pathStreamId'
     get:
@@ -3201,7 +3201,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.5/streams/{streamId}/action/disable:
+  '/delivery-progresses/v2.5/streams/{streamId}/action/disable':
     post:
       deprecated: true
       summary: Disabilita uno stream
@@ -3256,7 +3256,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.5/streams/{streamId}/events:
+  '/delivery-progresses/v2.5/streams/{streamId}/events':
     get:
       deprecated: true
       summary: Leggi progressi notifiche
@@ -3404,7 +3404,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.6/streams/{streamId}:
+  '/delivery-progresses/v2.6/streams/{streamId}':
     parameters:
       - $ref: '#/components/parameters/pathStreamId'
     get:
@@ -3527,7 +3527,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.6/streams/{streamId}/action/disable:
+  '/delivery-progresses/v2.6/streams/{streamId}/action/disable':
     post:
       deprecated: true
       summary: Disabilita uno stream
@@ -3582,7 +3582,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.6/streams/{streamId}/events:
+  '/delivery-progresses/v2.6/streams/{streamId}/events':
     get:
       deprecated: true
       summary: Leggi progressi notifiche
@@ -3730,7 +3730,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.7/streams/{streamId}:
+  '/delivery-progresses/v2.7/streams/{streamId}':
     parameters:
       - $ref: '#/components/parameters/pathStreamId'
     get:
@@ -3853,7 +3853,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.7/streams/{streamId}/action/disable:
+  '/delivery-progresses/v2.7/streams/{streamId}/action/disable':
     post:
       deprecated: true
       summary: Disabilita uno stream
@@ -3908,7 +3908,7 @@ paths:
             application/problem+json:
               schema:
                 $ref: '#/components/schemas/Problem'
-  /delivery-progresses/v2.7/streams/{streamId}/events:
+  '/delivery-progresses/v2.7/streams/{streamId}/events':
     get:
       deprecated: true
       summary: Leggi progressi notifiche
@@ -3988,7 +3988,7 @@ components:
       schema:
         type: string
         maxLength: 36
-        pattern: ^[A-Za-z0-9+/=]{36}$
+        pattern: '^[A-Za-z0-9+/=]{36}$'
     paProtocolNumber:
       name: paProtocolNumber
       in: query
@@ -4009,7 +4009,7 @@ components:
       required: false
       schema:
         type: string
-        pattern: ^[ -~]*$
+        pattern: '^[ -~]*$'
         maxLength: 256
     pathDocumentIdx:
       name: docIdx
@@ -4056,12 +4056,12 @@ components:
         type: string
         minLength: 25
         maxLength: 25
-        pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+        pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
     legalFactsSearchMandateId:
       name: mandateId
       in: query
       required: false
-      description: identificativo della delega, non utilizzato nelle API B2B
+      description: 'identificativo della delega, non utilizzato nelle API B2B'
       x-pn-intended-usage:
         - WEB
       schema:
@@ -4081,7 +4081,7 @@ components:
       required: true
       schema:
         type: string
-        pattern: ^[ -~]*$
+        pattern: '^[ -~]*$'
         maxLength: 1024
     pathDocumentType:
       description: Categoria documento
@@ -4097,7 +4097,7 @@ components:
       required: true
       schema:
         type: string
-        pattern: ^(safestorage:\/\/)?[A-Za-z0-9._-]+$
+        pattern: '^(safestorage:\/\/)?[A-Za-z0-9._-]+$'
         maxLength: 512
     queryLastEventId:
       description: >-
@@ -4111,7 +4111,7 @@ components:
         type: string
         minLength: 38
         maxLength: 38
-        pattern: ^0\d{37}$
+        pattern: '^0\d{37}$'
     pathStreamId:
       description: Identificativo dello stream di eventi
       name: streamId
@@ -4145,13 +4145,13 @@ components:
           description: The server cannot process the request
           example: Bad Request
           maxLength: 64
-          pattern: ^[ -~]{0,64}$
+          pattern: '^[ -~]{0,64}$'
           type: string
         detail:
           description: The server cannot process the request
           example: Bad Request
           maxLength: 4096
-          pattern: ^.{0,4096}$
+          pattern: '^.{0,4096}$'
           type: string
         functionalities:
           title: elenco funzionalità di PN
@@ -4182,7 +4182,7 @@ components:
           type: string
           minLength: 1
           maxLength: 512
-          pattern: ^[a-zA-Z0-9._-]{1,512}$
+          pattern: '^[a-zA-Z0-9._-]{1,512}$'
         contentType:
           title: MIME type del file che verrà caricato
           description: >-
@@ -4203,7 +4203,7 @@ components:
           example: jezIVxlG1M1woCSUngM6KipUN3/p8cG5RMIPnuEanlE=
           minLength: 44
           maxLength: 44
-          pattern: ^[A-Za-z0-9+\/]{43}=|[A-Za-z0-9+\/]{44}$
+          pattern: '^[A-Za-z0-9+\/]{43}=|[A-Za-z0-9+\/]{44}$'
     PreLoadResponse:
       title: Informazioni per il caricamento file
       description: >-
@@ -4218,7 +4218,7 @@ components:
           type: string
           minLength: 1
           maxLength: 512
-          pattern: ^[a-zA-Z0-9._-]{1,512}$
+          pattern: '^[a-zA-Z0-9._-]{1,512}$'
         secret:
           description: >-
             Token aggiuntivo per far si che sia necessario intercettare anche
@@ -4237,7 +4237,7 @@ components:
         url:
           description: URL a cui effettuare l'upload del contenuto del documento.
           type: string
-          example: https://preloadpn.aws.amazon.......
+          example: 'https://preloadpn.aws.amazon.......'
         key:
           description: >-
             la chiave restituita sarà globalmente unica e andrà utilizzata nella
@@ -4326,7 +4326,7 @@ components:
             identificativo univoco di una richiesta di invio notifica, non è lo
             IUN
           maxLength: 36
-          pattern: ^[A-Za-z0-9+/=]{36}$
+          pattern: '^[A-Za-z0-9+/=]{36}$'
         paProtocolNumber:
           type: string
           description: Identificativo inviato dalla pubblica amministrazione
@@ -4404,13 +4404,13 @@ components:
             readable
           example: Service Unavailable
           maxLength: 64
-          pattern: ^[ -~]{0,64}$
+          pattern: '^[ -~]{0,64}$'
           type: string
         detail:
           description: A human readable explanation of the problem.
           example: Request took too long to complete.
           maxLength: 4096
-          pattern: ^.{0,4096}$
+          pattern: '^.{0,4096}$'
           type: string
         traceId:
           description: Internal support identifier associated to error
@@ -4432,14 +4432,14 @@ components:
     ProblemError:
       properties:
         code:
-          description: Internal code of the error, in human-readable format
+          description: 'Internal code of the error, in human-readable format'
           example: >-
             PN_PARAMETER_TOO_LONG | PN_PARAMETER_TOO_SHORT | PN_DUPLICATE_ENTRY
             | etc...
           type: string
         element:
           description: Parameter or request body field name for validation error
-          example: body.order.item[2].quantity
+          example: 'body.order.item[2].quantity'
           type: string
         detail:
           description: >-
@@ -4549,7 +4549,7 @@ components:
           type: string
           minLength: 25
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         paymentDate:
           type: string
           format: date-time
@@ -4699,7 +4699,7 @@ components:
             necessario in caso di  "richiesta di notifica" rifiutata per errori
             nei codici di verifica degli allegati.
           type: string
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 256
         paProtocolNumber:
           description: Numero di protocollo che la PA mittente assegna alla notifica stessa
@@ -4708,7 +4708,7 @@ components:
           maxLength: 256
         subject:
           type: string
-          description: titolo della notifica, NON inserire dati personali/sensibili
+          description: 'titolo della notifica, NON inserire dati personali/sensibili'
           minLength: 10
           maxLength: 134
           pattern: ^.*$
@@ -4747,7 +4747,7 @@ components:
         group:
           type: string
           description: Gruppo di utenti dell'ente mittente che può visualizzare la notifica
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 1024
         amount:
           type: integer
@@ -4757,7 +4757,7 @@ components:
           type: string
           minLength: 10
           maxLength: 10
-          pattern: ^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$
+          pattern: '^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$'
           description: >-
             Data di scadenza del pagamento nel formato YYYY-MM-DD riferito
             all'Italia
@@ -4765,7 +4765,7 @@ components:
           type: string
           minLength: 7
           maxLength: 7
-          pattern: ^([0-9]{6}[A-Z]{1})$
+          pattern: '^([0-9]{6}[A-Z]{1})$'
           description: >-
             Codice tassonomico della notifica basato sulla definizione presente
             nell'allegato 2 capitolo C del bando [__AVVISO PUBBLICO MISURA 1.4.5
@@ -4831,7 +4831,7 @@ components:
             necessario in caso di  "richiesta di notifica" rifiutata per errori
             nei codici di verifica degli allegati.
           type: string
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 256
         paProtocolNumber:
           description: Numero di protocollo che la PA mittente assegna alla notifica stessa
@@ -4876,7 +4876,7 @@ components:
         group:
           type: string
           description: Gruppo di utenti dell'ente mittente che può visualizzare la notifica
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 1024
         amount:
           type: integer
@@ -4886,7 +4886,7 @@ components:
           type: string
           minLength: 10
           maxLength: 10
-          pattern: ^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$
+          pattern: '^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$'
           description: >-
             Data di scadenza del pagamento nel formato YYYY-MM-DD riferito
             all'Italia
@@ -4894,7 +4894,7 @@ components:
           type: string
           minLength: 7
           maxLength: 7
-          pattern: ^([0-9]{6}[A-Z]{1})$
+          pattern: '^([0-9]{6}[A-Z]{1})$'
           description: >-
             Codice tassonomico della notifica basato sulla definizione presente
             nell'allegato 2 capitolo C del bando [__AVVISO PUBBLICO MISURA 1.4.5
@@ -4937,7 +4937,7 @@ components:
             necessario in caso di  "richiesta di notifica" rifiutata per errori
             nei codici di verifica degli allegati.
           type: string
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 256
         paProtocolNumber:
           description: Numero di protocollo che la PA mittente assegna alla notifica stessa
@@ -4983,7 +4983,7 @@ components:
         group:
           type: string
           description: Gruppo di utenti dell'ente mittente che può visualizzare la notifica
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 1024
         amount:
           type: integer
@@ -4993,7 +4993,7 @@ components:
           type: string
           minLength: 10
           maxLength: 10
-          pattern: ^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$
+          pattern: '^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$'
           description: >-
             Data di scadenza del pagamento nel formato YYYY-MM-DD riferito
             all'Italia
@@ -5001,7 +5001,7 @@ components:
           type: string
           minLength: 7
           maxLength: 7
-          pattern: ^([0-9]{6}[A-Z]{1})$
+          pattern: '^([0-9]{6}[A-Z]{1})$'
           description: >-
             Codice tassonomico della notifica basato sulla definizione presente
             nell'allegato 2 capitolo C del bando [__AVVISO PUBBLICO MISURA 1.4.5
@@ -5043,7 +5043,7 @@ components:
             necessario in caso di  "richiesta di notifica" rifiutata per errori
             nei codici di verifica degli allegati.
           type: string
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 256
         paProtocolNumber:
           description: Numero di protocollo che la PA mittente assegna alla notifica stessa
@@ -5089,7 +5089,7 @@ components:
         group:
           type: string
           description: Gruppo di utenti dell'ente mittente che può visualizzare la notifica
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 1024
         amount:
           type: integer
@@ -5099,7 +5099,7 @@ components:
           type: string
           minLength: 10
           maxLength: 10
-          pattern: ^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$
+          pattern: '^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$'
           description: >-
             Data di scadenza del pagamento nel formato YYYY-MM-DD riferito
             all'Italia
@@ -5107,7 +5107,7 @@ components:
           type: string
           minLength: 7
           maxLength: 7
-          pattern: ^([0-9]{6}[A-Z]{1})$
+          pattern: '^([0-9]{6}[A-Z]{1})$'
           description: >-
             Codice tassonomico della notifica basato sulla definizione presente
             nell'allegato 2 capitolo C del bando [__AVVISO PUBBLICO MISURA 1.4.5
@@ -5887,7 +5887,7 @@ components:
       properties:
         type:
           type: string
-          description: tipo di indirizzo PEC, REM, SERCQ, ...
+          description: 'tipo di indirizzo PEC, REM, SERCQ, ...'
           enum:
             - PEC
         address:
@@ -5977,7 +5977,7 @@ components:
           example: jezIVxlG1M1woCSUngM6KipUN3/p8cG5RMIPnuEanlE=
           minLength: 44
           maxLength: 44
-          pattern: ^[A-Za-z0-9+\/]{43}=|[A-Za-z0-9+\/]{44}$
+          pattern: '^[A-Za-z0-9+\/]{43}=|[A-Za-z0-9+\/]{44}$'
     NotificationAttachmentBodyRef:
       description: Riferimento all'allegato precaricato
       required:
@@ -5989,7 +5989,7 @@ components:
           type: string
           description: Chiave in cui è stato salvato l'allegato
           maxLength: 512
-          pattern: ^(safestorage:\/\/)?[A-Za-z0-9._-]+$
+          pattern: '^(safestorage:\/\/)?[A-Za-z0-9._-]+$'
         versionToken:
           type: string
           description: >-
@@ -6010,7 +6010,7 @@ components:
           $ref: '#/components/schemas/NotificationAttachmentDigests'
         contentType:
           type: string
-          description: tipo di contenuto dell'allegato, supportato application/pdf
+          description: 'tipo di contenuto dell''allegato, supportato application/pdf'
           minLength: 15
           maxLength: 15
           pattern: ^application\/pdf$
@@ -6060,7 +6060,7 @@ components:
           $ref: '#/components/schemas/NotificationAttachmentDigests'
         contentType:
           type: string
-          description: tipo di contenuto dell'allegato, supportato application/json
+          description: 'tipo di contenuto dell''allegato, supportato application/json'
           minLength: 16
           maxLength: 16
           pattern: ^application\/json$
@@ -6168,7 +6168,7 @@ components:
       type: string
       minLength: 25
       maxLength: 25
-      pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+      pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
     PaFeeV23:
       type: integer
       description: >-
@@ -6216,7 +6216,7 @@ components:
             necessario in caso di  "richiesta di notifica" rifiutata per errori
             nei codici di verifica degli allegati.
           type: string
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 256
         paProtocolNumber:
           description: Numero di protocollo che la PA mittente assegna alla notifica stessa
@@ -6262,7 +6262,7 @@ components:
         group:
           type: string
           description: Gruppo di utenti dell'ente mittente che può visualizzare la notifica
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 1024
         amount:
           type: integer
@@ -6272,7 +6272,7 @@ components:
           type: string
           minLength: 10
           maxLength: 10
-          pattern: ^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$
+          pattern: '^([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$'
           description: >-
             Data di scadenza del pagamento nel formato YYYY-MM-DD riferito
             all'Italia
@@ -6280,7 +6280,7 @@ components:
           type: string
           minLength: 7
           maxLength: 7
-          pattern: ^([0-9]{6}[A-Z]{1})$
+          pattern: '^([0-9]{6}[A-Z]{1})$'
           description: >-
             Codice tassonomico della notifica basato sulla definizione presente
             nell'allegato 2 capitolo C del bando [__AVVISO PUBBLICO MISURA 1.4.5
@@ -6396,7 +6396,7 @@ components:
             Chiave dell'atto opponibile a terzi generato durante il processo di
             consegna
           type: string
-          pattern: ^(safestorage:\/\/)?[A-Za-z0-9._-]+$
+          pattern: '^(safestorage:\/\/)?[A-Za-z0-9._-]+$'
           maxLength: 512
         category:
           $ref: '#/components/schemas/LegalFactCategoryV20'
@@ -6584,7 +6584,7 @@ components:
           description: >-
             token usato per disambiguare "richieste di notificazione" effettuate
             con lo stesso  numero di protocollo.
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 256
     AnalogFailureWorkflowDetails:
       type: object
@@ -6661,7 +6661,7 @@ components:
         type:
           x-field-extra-annotation: '@lombok.ToString.Exclude'
           type: string
-          description: tipo di indirizzo PEC, REM, SERCQ, SMS, EMAIL, APPIO ...
+          description: 'tipo di indirizzo PEC, REM, SERCQ, SMS, EMAIL, APPIO ...'
         address:
           x-field-extra-annotation: '@lombok.ToString.Exclude'
           type: string
@@ -6973,7 +6973,7 @@ components:
           description: >-
             token usato per disambiguare "richieste di notificazione" effettuate
             con lo stesso  numero di protocollo.
-          pattern: ^[ -~]*$
+          pattern: '^[ -~]*$'
           maxLength: 256
     ScheduleAnalogWorkflowDetailsV23:
       type: object
@@ -7145,7 +7145,7 @@ components:
           description: data notifica
           format: date-time
         deliveryFailureCause:
-          description: Codice errore, vuoto in caso di successo
+          description: 'Codice errore, vuoto in caso di successo'
           type: string
         deliveryDetailCode:
           type: string
@@ -7176,7 +7176,7 @@ components:
           description: Index destinatario notifica digitale
           format: int32
         deliveryFailureCause:
-          description: Codice errore, opzionale
+          description: 'Codice errore, opzionale'
           type: string
         deliveryDetailCode:
           type: string
@@ -7789,7 +7789,7 @@ components:
           type: integer
           format: int32
           example: 54092
-          description: dimensione, in byte, del contenuto.
+          description: 'dimensione, in byte, del contenuto.'
         sha256:
           type: string
           description: SHA256 del contenuto del file.
@@ -7901,7 +7901,7 @@ components:
             Chiave dell'atto opponibile a terzi generato durante il processo di
             consegna
           type: string
-          pattern: ^(safestorage:\/\/)?[A-Za-z0-9._-]+$
+          pattern: '^(safestorage:\/\/)?[A-Za-z0-9._-]+$'
           maxLength: 512
         category:
           $ref: '#/components/schemas/LegalFactCategory'
@@ -8124,7 +8124,7 @@ components:
           description: Index destinatario notifica digitale
           format: int32
         deliveryFailureCause:
-          description: Codice errore, opzionale
+          description: 'Codice errore, opzionale'
           type: string
         deliveryDetailCode:
           type: string
@@ -8951,27 +8951,27 @@ components:
       type: object
       properties:
         surname:
-          pattern: ^[A-Z\\s]{1,24}$
+          pattern: '^[A-Z\\s]{1,24}$'
           type: string
           description: surname of the person
         name:
-          pattern: ^[A-Z\\s]{1,20}$
+          pattern: '^[A-Z\\s]{1,20}$'
           type: string
           description: name of the person
         birthDate:
-          pattern: ^\d{2}-\d{2}-\d{4}$
+          pattern: '^\d{2}-\d{2}-\d{4}$'
           type: string
           description: birthdate of the person
         sex:
-          pattern: ^[FM]$
+          pattern: '^[FM]$'
           type: string
           description: indicate if is (F)emale or (M)ale
         birthPlace:
-          pattern: ^[A-Z\s]{1,40}$
+          pattern: '^[A-Z\s]{1,40}$'
           type: string
           description: birth place of the person
         birthProvince:
-          pattern: ^[A-Z]{2}$
+          pattern: '^[A-Z]{2}$'
           type: string
           description: birth province of the person
       description: Personal Data (Dati Anagrafici) object
@@ -8979,15 +8979,15 @@ components:
       type: object
       properties:
         municipality:
-          pattern: ^[A-Z]{1,40}$
+          pattern: '^[A-Z]{1,40}$'
           type: string
           description: municipality of the tax address
         province:
-          pattern: ^[A-Z]{2}$
+          pattern: '^[A-Z]{2}$'
           type: string
           description: province of the tax address
         address:
-          pattern: ^[A-Z0-9\s.]{1,35}$
+          pattern: '^[A-Z0-9\s.]{1,35}$'
           type: string
           description: street and house number of the tax address
       description: Tax Residence (Domicilio Fiscale) object
@@ -9003,7 +9003,7 @@ components:
       type: object
       properties:
         name:
-          pattern: ^[A-Z\s]{1,60}$
+          pattern: '^[A-Z\s]{1,60}$'
           type: string
           description: Company name
         taxAddress:
@@ -9030,7 +9030,7 @@ components:
           type: string
           description: It is the tax code of a relative of the main tax payer
         id:
-          pattern: ^[A-Z0-9]{2}$
+          pattern: '^[A-Z0-9]{2}$'
           type: string
           description: identification code
     IncludeNotificationCost:
@@ -9048,23 +9048,23 @@ components:
       type: object
       properties:
         taxType:
-          pattern: ^[A-Z0-9]{4}$
+          pattern: '^[A-Z0-9]{4}$'
           type: string
           description: identification code of the type of tax
         installment:
-          pattern: ^[A-Z0-9]{0,4}$
+          pattern: '^[A-Z0-9]{0,4}$'
           type: string
           description: identification code of the ente
         year:
-          pattern: ^[1-2][0-9]{3}$
+          pattern: '^[1-2][0-9]{3}$'
           type: string
           description: reference year of the tax
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount of the tax
         credit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: credit amount of the tax
       description: Tax object
@@ -9077,11 +9077,11 @@ components:
             $ref: '#/components/schemas/Tax'
           description: list of the taxes
         office:
-          pattern: ^[A-Z0-9]{3}$
+          pattern: '^[A-Z0-9]{3}$'
           type: string
           description: identification code of the office
         document:
-          pattern: ^\d{11}$
+          pattern: '^\d{11}$'
           type: string
           description: identification code of the document
       description: Treasury Section (Sezione Erario) object
@@ -9089,11 +9089,11 @@ components:
       type: object
       properties:
         startDate:
-          pattern: ^[0-9]{6}$
+          pattern: '^[0-9]{6}$'
           type: string
           description: start date of the period
         endDate:
-          pattern: ^[0-9]{6}$
+          pattern: '^[0-9]{6}$'
           type: string
           description: end date of the period
       description: Reporting Period (Sezione INPS) object
@@ -9103,25 +9103,25 @@ components:
       type: object
       properties:
         office:
-          pattern: ^[0-9]{3,4}$
+          pattern: '^[0-9]{3,4}$'
           type: string
           description: identification code of the office
         reason:
-          pattern: ^[A-Z-]{3,4}$
+          pattern: '^[A-Z-]{3,4}$'
           type: string
           description: contribution reason for the record
         inps:
-          pattern: ^[A-Za-z0-9\s]{0,17}$
+          pattern: '^[A-Za-z0-9\s]{0,17}$'
           type: string
           description: INPS identification code
         period:
           $ref: '#/components/schemas/Period'
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount of the record
         credit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: credit amount of the record
       description: INPS Record object
@@ -9140,27 +9140,27 @@ components:
       type: object
       properties:
         region:
-          pattern: ^[0-9]{2}$
+          pattern: '^[0-9]{2}$'
           type: string
           description: region identification code
         taxType:
-          pattern: ^[0-9A-Z]{4}$
+          pattern: '^[0-9A-Z]{4}$'
           type: string
           description: identification code of the type of tax
         installment:
-          pattern: ^[A-Z0-9]{0,4}$
+          pattern: '^[A-Z0-9]{0,4}$'
           type: string
           description: identification code of the ente
         year:
-          pattern: ^[1-2][0-9]{3}$
+          pattern: '^[1-2][0-9]{3}$'
           type: string
           description: reference year
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount of the record
         credit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: credit amount of the record
       description: Region Record object
@@ -9182,7 +9182,7 @@ components:
         - taxType
       properties:
         municipality:
-          pattern: ^[0-9A-Z]{4}$
+          pattern: '^[0-9A-Z]{4}$'
           type: string
           description: identification code of the municipality
         reconsideration:
@@ -9198,27 +9198,27 @@ components:
           type: boolean
           description: to check if it a full payment
         numberOfProperties:
-          pattern: ^[0-9]{3}$
+          pattern: '^[0-9]{3}$'
           type: string
           description: number of properties
         taxType:
-          pattern: ^[0-9]{4}$
+          pattern: '^[0-9]{4}$'
           type: string
           description: identification code of the type of tax
         installment:
-          pattern: ^[A-Z0-9]{0,4}$
+          pattern: '^[A-Z0-9]{0,4}$'
           type: string
           description: identification code of the ente
         year:
-          pattern: ^[1-2][0-9]{3}$
+          pattern: '^[1-2][0-9]{3}$'
           type: string
           description: reference year
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount of the record
         credit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: credit amount of the record
       description: LocalTax Record object
@@ -9226,7 +9226,7 @@ components:
       type: object
       properties:
         operationId:
-          pattern: ^[A-Z0-9]{18}$
+          pattern: '^[A-Z0-9]{18}$'
           type: string
           description: identification code of the operation
         records:
@@ -9234,7 +9234,7 @@ components:
           items:
             $ref: '#/components/schemas/LocalTaxRecord'
         deduction:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: if there are any deduction
       description: LocalTax Section (Sezione LocalTax e Altri Tributi Locali) object
@@ -9244,31 +9244,31 @@ components:
       type: object
       properties:
         office:
-          pattern: ^[0-9]{5}$
+          pattern: '^[0-9]{5}$'
           type: string
           description: identification code of the office
         company:
-          pattern: ^[0-9]{8}$
+          pattern: '^[0-9]{8}$'
           type: string
           description: identification code of the company
         control:
-          pattern: ^[0-9]{2}$
+          pattern: '^[0-9]{2}$'
           type: string
           description: control identification code
         refNumber:
-          pattern: ^[0-9]{6}$
+          pattern: '^[0-9]{6}$'
           type: string
           description: reference number
         reason:
-          pattern: ^[A-Z0-9]$
+          pattern: '^[A-Z0-9]$'
           type: string
           description: reason of the record
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount of the record
         credit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: credit amount of the record
       description: INAIL Record object
@@ -9278,29 +9278,29 @@ components:
       type: object
       properties:
         institution:
-          pattern: ^[0-9]{4}$
+          pattern: '^[0-9]{4}$'
           type: string
           description: identification code of the institution
         office:
-          pattern: ^[0-9A-Z]{5}$
+          pattern: '^[0-9A-Z]{5}$'
           type: string
           description: identification code of the office
         reason:
-          pattern: ^[0-9A-Z]{3,4}$
+          pattern: '^[0-9A-Z]{3,4}$'
           type: string
           description: reason of the contribution
         position:
-          pattern: ^[0-9]{9}$
+          pattern: '^[0-9]{9}$'
           type: string
           description: identification code of the position
         period:
           $ref: '#/components/schemas/Period'
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount of the record
         credit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: credit amount of the record
       description: Social Security Record object
@@ -9348,15 +9348,15 @@ components:
           type: string
           description: It is the tax code of a relative of the main tax payer
         id:
-          pattern: ^[A-Z0-9]{2}$
+          pattern: '^[A-Z0-9]{2}$'
           type: string
           description: identification code
         document:
-          pattern: ^\d{11}$
+          pattern: '^\d{11}$'
           type: string
           description: identification code of the document
         office:
-          pattern: ^[A-Z0-9]{3}$
+          pattern: '^[A-Z0-9]{3}$'
           type: string
           description: identification code of the office
     SimplifiedPaymentRecord:
@@ -9374,7 +9374,7 @@ components:
       type: object
       properties:
         operationId:
-          pattern: ^[A-Z0-9]{18}$
+          pattern: '^[A-Z0-9]{18}$'
           type: string
           description: identification code of the operation
         records:
@@ -9411,7 +9411,7 @@ components:
           type: string
           description: It is the tax code of a relative of the main tax payer
         id:
-          pattern: ^[A-Z0-9]{2}$
+          pattern: '^[A-Z0-9]{2}$'
           type: string
           description: identification code
     ExciseTax:
@@ -9420,35 +9420,35 @@ components:
       type: object
       properties:
         institution:
-          pattern: ^[A-Z]{2}$
+          pattern: '^[A-Z]{2}$'
           type: string
           description: institution of the tax
         province:
-          pattern: ^[A-Z]{2}$
+          pattern: '^[A-Z]{2}$'
           type: string
           description: province of the tax
         id:
-          pattern: ^[A-Z0-9]{17}$
+          pattern: '^[A-Z0-9]{17}$'
           type: string
           description: identification code
         taxType:
-          pattern: ^[0-9A-Z]{4}$
+          pattern: '^[0-9A-Z]{4}$'
           type: string
           description: identification code of the type of tax
         installment:
-          pattern: ^[A-Z0-9]{0,4}$
+          pattern: '^[A-Z0-9]{0,4}$'
           type: string
           description: identification code of the ente
         month:
-          pattern: ^[0-1][0-9]$
+          pattern: '^[0-1][0-9]$'
           type: string
           description: month reference
         year:
-          pattern: ^[1-2][0-9]{3}$
+          pattern: '^[1-2][0-9]{3}$'
           type: string
           description: reference year
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount
       description: Excise Tax object
@@ -9461,11 +9461,11 @@ components:
             $ref: '#/components/schemas/ExciseTax'
           description: Excise Tax List
         office:
-          pattern: ^[A-Z0-9]{3}$
+          pattern: '^[A-Z0-9]{3}$'
           type: string
           description: identification code of the office
         document:
-          pattern: ^\d{11}$
+          pattern: '^\d{11}$'
           type: string
           description: identification code of the document
       description: Excise Section (Accise) object
@@ -9503,7 +9503,7 @@ components:
           type: string
           description: It is the tax code of a relative of the main tax payer
         id:
-          pattern: ^[A-Z0-9]{2}$
+          pattern: '^[A-Z0-9]{2}$'
           type: string
           description: identification code
     TreasuryRecord:
@@ -9512,23 +9512,23 @@ components:
       type: object
       properties:
         type:
-          pattern: ^[A-Z]$
+          pattern: '^[A-Z]$'
           type: string
           description: type of treasury
         id:
-          pattern: ^[A-Z0-9]{17}$
+          pattern: '^[A-Z0-9]{17}$'
           type: string
           description: identification code of the element
         taxType:
-          pattern: ^[A-Z0-9]{4}$
+          pattern: '^[A-Z0-9]{4}$'
           type: string
           description: identification code of the type of tax
         year:
-          pattern: ^[1-2][0-9]{3}$
+          pattern: '^[1-2][0-9]{3}$'
           type: string
           description: referance year
         debit:
-          pattern: ^[0-9]{3,15}$
+          pattern: '^[0-9]{3,15}$'
           type: string
           description: debit amount of the record
       description: Treasury Record object
@@ -9536,11 +9536,11 @@ components:
       type: object
       properties:
         office:
-          pattern: ^[A-Z0-9]{3}$
+          pattern: '^[A-Z0-9]{3}$'
           type: string
           description: identification code of the office
         document:
-          pattern: ^\d{11}$
+          pattern: '^\d{11}$'
           type: string
           description: identification code of the document
         records:
@@ -9563,8 +9563,8 @@ components:
         - code
       properties:
         code:
-          description: Internal code of the error or warning, in human-readable format
-          example: NOTIFICATION_CANCELLATION_ACCEPTED, NOTIFICATION_ALREADY_CANCELLED
+          description: 'Internal code of the error or warning, in human-readable format'
+          example: 'NOTIFICATION_CANCELLATION_ACCEPTED, NOTIFICATION_ALREADY_CANCELLED'
           type: string
         level:
           description: |
@@ -9596,7 +9596,7 @@ components:
           description: Identificativo Univoco Notifica a cui l'atto è associato
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         legalFactsId:
           $ref: '#/components/schemas/LegalFactsIdV20'
     LegalFactListV20:
@@ -9623,7 +9623,7 @@ components:
           type: number
           format: decimal32
           example: 54092
-          description: dimensione, in byte, del contenuto.
+          description: 'dimensione, in byte, del contenuto.'
         url:
           type: string
           description: >-
@@ -9660,7 +9660,7 @@ components:
           type: number
           format: decimal32
           example: 54092
-          description: dmensione, in byte, del contenuto.
+          description: 'dmensione, in byte, del contenuto.'
         url:
           type: string
           description: >-
@@ -9691,7 +9691,7 @@ components:
           description: Identificativo Univoco Notifica a cui l'atto è associato
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         legalFactsId:
           $ref: '#/components/schemas/LegalFactsId'
     LegalFactList:
@@ -9781,7 +9781,7 @@ components:
             type: string
             minLength: 4
             maxLength: 256
-            pattern: ^[A-Z_]+$
+            pattern: '^[A-Z_]+$'
         waitForAccepted:
           description: >-
             Stream di tipo TIMELINE: se true pubblica gli eventi sullo stream
@@ -9858,7 +9858,7 @@ components:
             notifica è  stata accettata.
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         newStatus:
           $ref: '#/components/schemas/NotificationStatusV26'
         element:
@@ -9891,7 +9891,7 @@ components:
             notifica è stata accettata.
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         newStatus:
           $ref: '#/components/schemas/NotificationStatus'
         timelineEventCategory:
@@ -10014,7 +10014,7 @@ components:
             type: string
             minLength: 4
             maxLength: 256
-            pattern: ^[A-Z_]+$
+            pattern: '^[A-Z_]+$'
     StreamMetadataResponseV23:
       description: Configurazioni di un flusso di eventi
       allOf:
@@ -10064,7 +10064,7 @@ components:
             notifica è  stata accettata.
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         newStatus:
           $ref: '#/components/schemas/NotificationStatus'
         element:
@@ -10150,7 +10150,7 @@ components:
             type: string
             minLength: 4
             maxLength: 256
-            pattern: ^[A-Z_]+$
+            pattern: '^[A-Z_]+$'
     StreamMetadataResponseV24:
       description: Configurazioni di un flusso di eventi
       allOf:
@@ -10200,7 +10200,7 @@ components:
             notifica è  stata accettata.
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         newStatus:
           $ref: '#/components/schemas/NotificationStatus'
         element:
@@ -10286,7 +10286,7 @@ components:
             type: string
             minLength: 4
             maxLength: 256
-            pattern: ^[A-Z_]+$
+            pattern: '^[A-Z_]+$'
     StreamMetadataResponseV25:
       description: Configurazioni di un flusso di eventi
       allOf:
@@ -10336,7 +10336,7 @@ components:
             notifica è  stata accettata.
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         newStatus:
           $ref: '#/components/schemas/NotificationStatus'
         element:
@@ -10422,7 +10422,7 @@ components:
             type: string
             minLength: 4
             maxLength: 256
-            pattern: ^[A-Z_]+$
+            pattern: '^[A-Z_]+$'
     StreamMetadataResponseV26:
       description: Configurazioni di un flusso di eventi
       allOf:
@@ -10472,7 +10472,7 @@ components:
             notifica è  stata accettata.
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         newStatus:
           $ref: '#/components/schemas/NotificationStatusV26'
         element:
@@ -10558,7 +10558,7 @@ components:
             type: string
             minLength: 4
             maxLength: 256
-            pattern: ^[A-Z_]+$
+            pattern: '^[A-Z_]+$'
         waitForAccepted:
           description: >-
             Stream di tipo TIMELINE: se true pubblica gli eventi sullo stream
@@ -10614,7 +10614,7 @@ components:
             notifica è  stata accettata.
           type: string
           maxLength: 25
-          pattern: ^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$
+          pattern: '^[A-Z]{4}-[A-Z]{4}-[A-Z]{4}-[0-9]{6}-[A-Z]{1}-[0-9]{1}$'
         newStatus:
           $ref: '#/components/schemas/NotificationStatusV26'
         element:
@@ -10669,7 +10669,7 @@ components:
             type: string
             minLength: 4
             maxLength: 256
-            pattern: ^[A-Z_]+$
+            pattern: '^[A-Z_]+$'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
